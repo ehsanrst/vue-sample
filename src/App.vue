@@ -9,7 +9,7 @@
           </router-link>
         </div>
 
-<!--        <AppProfile :badge="count"/>-->
+        <!--        <AppProfile :badge="count"/>-->
         <AppMenu :model="menu" @menuitem-click="onMenuItemClick"/>
       </div>
     </transition>
@@ -98,12 +98,11 @@ export default {
       overlayMenuActive: false,
       mobileMenuActive: false,
       menu: [
-        {label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '#'},
+        {label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'},
         {
-          label: 'UI Kit', icon: 'pi pi-fw pi-sitemap', to: '#',
+          label: 'Menes', icon: 'pi pi-fw pi-sitemap', to: '#',
           items: [
-            {label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '#'},
-            {label: 'Input', icon: 'pi pi-fw pi-check-square', to: '#'}
+            {label: 'Users', icon: 'pi pi-fw pi-user', to: '/users'}
           ]
         }
       ]

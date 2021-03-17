@@ -19,7 +19,7 @@ import PrimeVue from 'primevue/config'
 import ToastService from 'primevue/toastservice'
 import BadgeDirective from 'primevue/badgedirective'
 import Ripple from 'primevue/ripple'
-import {createRouter, createWebHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
@@ -28,14 +28,16 @@ import Toast from 'primevue/toast'
 import Menubar from 'primevue/menubar'
 import Badge from 'primevue/badge'
 import Avatar from 'primevue/avatar'
-
-import Dashboard from '@/components/Dashboard'
 import Chart from 'primevue/chart'
 
+import Dashboard from '@/components/Dashboard'
+import Users from '@/components/Users'
+
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
-        {path: '/', component: Dashboard}
+        {path: '/', component: Dashboard},
+        {path: '/users', component: Users}
     ]
 })
 
