@@ -1,7 +1,7 @@
 <template>
   <InputText v-model="text"/>
   <Button class="p-button-info" label="Open Dialog" icon="pi pi-user" @click="openBasic"/>
-  <Button class="p-button-success" label="Open Toast" icon="pi pi-envelope"  @click="showToast"/>
+  <Button class="p-button-success" label="Open Toast" icon="pi pi-envelope" @click="showToast"/>
 
   <Toast/>
   <Dialog v-model:visible="display">
@@ -47,12 +47,5 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

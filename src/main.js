@@ -13,6 +13,8 @@ import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Dialog from 'primevue/dialog'
 import Toast from 'primevue/toast'
+import Menubar from 'primevue/menubar';
+
 import Sample from '@/components/Sample'
 
 const router = createRouter({
@@ -31,5 +33,6 @@ app.component('Button', Button)
 app.component('InputText', InputText)
 app.component('Dialog', Dialog)
 app.component('Toast', Toast)
+app.component('Menubar', Menubar)
 
 app.mount('#app')
