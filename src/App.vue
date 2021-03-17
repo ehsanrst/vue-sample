@@ -5,9 +5,7 @@
     </template>
     <template #end>
       <InputText placeholder="Search" type="text"/>
-      <i class="pi pi-bell p-mr-4 p-text-secondary"
-         style="font-size: 1.25rem; margin-left: 0.25em; margin-right: 0.25em" v-badge="count"></i>
-      <Button label="Logout" icon="pi pi-power-off" class="p-button-danger" :style="{'margin-left': '0.5em'}"/>
+      <Avatar icon="pi pi-user" :style="{'margin-left': '0.5em'}" size="medium" v-badge.danger="count"/>
     </template>
   </Menubar>
 

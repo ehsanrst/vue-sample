@@ -2,6 +2,7 @@
   <InputText v-model="text"/>
   <Button class="p-button-info" label="Open Dialog" icon="pi pi-user" @click="openBasic"/>
   <Button class="p-button-success" label="Open Toast" icon="pi pi-envelope" @click="showToast"/>
+  <Chart type="line" :data="basicData"/>
 
   <Toast/>
   <Dialog v-model:visible="display">
@@ -27,6 +28,23 @@ export default defineComponent({
     const toast = useToast()
     const text = ref('')
     const display = ref(false)
+    const basicData = ref({
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [
+        {
+          label: 'First Dataset',
+          data: [65, 59, 80, 81, 56, 55, 40],
+          fill: false,
+          borderColor: '#42A5F5'
+        },
+        {
+          label: 'Second Dataset',
+          data: [28, 48, 40, 19, 86, 27, 90],
+          fill: false,
+          borderColor: '#FFA726'
+        }
+      ]
+    })
 
     const openBasic = () => {
       display.value = true
@@ -39,6 +57,7 @@ export default defineComponent({
     return {
       text,
       display,
+      basicData,
       openBasic,
       showToast
     }

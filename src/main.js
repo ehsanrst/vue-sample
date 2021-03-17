@@ -16,8 +16,10 @@ import Dialog from 'primevue/dialog'
 import Toast from 'primevue/toast'
 import Menubar from 'primevue/menubar';
 import Badge from 'primevue/badge';
+import Avatar from 'primevue/avatar';
 
 import Sample from '@/components/Sample'
+import Chart from 'primevue/chart'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -39,5 +41,7 @@ app.component('Dialog', Dialog)
 app.component('Toast', Toast)
 app.component('Menubar', Menubar)
 app.component('Badge', Badge)
+app.component('Avatar', Avatar)
+app.component('Chart', Chart)
 
 app.mount('#app')
