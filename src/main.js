@@ -6,16 +6,26 @@ import {createApp} from 'vue'
 import App from './App.vue'
 
 import PrimeVue from 'primevue/config'
+import ToastService from 'primevue/toastservice'
+import {createRouter, createWebHistory} from 'vue-router'
 
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Dialog from 'primevue/dialog'
 import Toast from 'primevue/toast'
-import ToastService from 'primevue/toastservice'
+import Sample from '@/components/Sample'
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        {path: '/', component: Sample}
+    ]
+})
 
 const app = createApp(App)
-app.use(PrimeVue, { ripple: true })
+app.use(PrimeVue, {ripple: true})
 app.use(ToastService)
+app.use(router)
 
 app.component('Button', Button)
 app.component('InputText', InputText)
