@@ -1,10 +1,12 @@
 <template>
   <Menubar :model="items">
     <template #start>
-      <img alt="logo" src="@/assets/logo.png" height="40" class="p-mr-2"/>
+      <img alt="logo" src="@/assets/logo.png" height="40" class="p-mr-2" @click="incrementCount"/>
     </template>
     <template #end>
       <InputText placeholder="Search" type="text"/>
+      <i class="pi pi-bell p-mr-4 p-text-secondary"
+         style="font-size: 1.25rem; margin-left: 0.25em; margin-right: 0.25em" v-badge="count"></i>
       <Button label="Logout" icon="pi pi-power-off" class="p-button-danger" :style="{'margin-left': '0.5em'}"/>
     </template>
   </Menubar>
@@ -143,9 +145,13 @@ export default {
         ]
       }
     ])
+    const count = ref(0)
+    const incrementCount = () => count.value++
 
     return {
-      items
+      items,
+      count,
+      incrementCount
     }
   }
 }
