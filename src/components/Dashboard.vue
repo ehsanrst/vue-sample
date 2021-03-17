@@ -1,7 +1,9 @@
 <template>
   <InputText v-model="text"/>
-  <Button class="p-button-info" label="Open Dialog" icon="pi pi-user" @click="openBasic"/>
-  <Button class="p-button-success" label="Open Toast" icon="pi pi-envelope" @click="showToast"/>
+  <Button class="p-button-info" label="Open Dialog" icon="pi pi-user" @click="openBasic"
+          :style="{'marginLeft': '0.5em'}"/>
+  <Button class="p-button-success" label="Open Toast" icon="pi pi-envelope" @click="showToast"
+          :style="{'marginLeft': '0.5em'}"/>
   <Chart type="line" :data="basicData"/>
 
   <Toast/>

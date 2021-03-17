@@ -1,0 +1,89 @@
+/* General */
+/* Menu Common */
+/* Menu Light */
+/* Menu Dark */
+/* Topbar */
+/* Footer */
+@media (min-width: 1025px) {
+  .layout-wrapper.layout-overlay .layout-topbar {
+    left: 0;
+  }
+
+  .layout-wrapper.layout-overlay .layout-main, .layout-wrapper.layout-overlay .layout-footer {
+    margin-left: 0;
+  }
+
+  .layout-wrapper.layout-overlay.layout-overlay-sidebar-active .layout-sidebar {
+    left: 0;
+  }
+
+  .layout-wrapper.layout-overlay.layout-overlay-sidebar-active .layout-topbar {
+    left: 250px;
+  }
+
+  .layout-wrapper.layout-overlay.layout-mobile-sidebar-active .layout-sidebar {
+    left: 0;
+  }
+
+  .layout-wrapper.layout-overlay.layout-mobile-sidebar-active .layout-topbar {
+    left: 250px;
+  }
+
+  .layout-wrapper.layout-static .layout-topbar {
+    left: 250px;
+  }
+
+  .layout-wrapper.layout-static .layout-main, .layout-wrapper.layout-static .layout-footer {
+    margin-left: 250px;
+  }
+
+  .layout-wrapper.layout-static.layout-static-sidebar-inactive .layout-topbar {
+    left: 0;
+  }
+
+  .layout-wrapper.layout-static.layout-static-sidebar-inactive .layout-main, .layout-wrapper.layout-static.layout-static-sidebar-inactive .layout-footer {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .layout-wrapper .layout-topbar {
+    left: 0;
+  }
+
+  .layout-wrapper .layout-main, .layout-wrapper .layout-footer {
+    margin-left: 0;
+  }
+
+  .layout-wrapper .layout-sidebar {
+    transition: left 0.2s;
+    left: -250px;
+    margin-top: 50px;
+  }
+
+  .layout-wrapper .layout-mask {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 998;
+    background-color: #424242;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+  }
+
+  .layout-wrapper.layout-mobile-sidebar-active .layout-sidebar {
+    left: 0;
+  }
+
+  .layout-wrapper.layout-mobile-sidebar-active .layout-mask {
+    display: block;
+  }
+
+  .body-overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

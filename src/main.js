@@ -1,39 +1,53 @@
-import 'primevue/resources/themes/vela-blue/theme.css'
+import 'primevue/resources/themes/saga-blue/theme.css'
 import 'primevue/resources/primevue.min.css'
+import 'primeflex/primeflex.css'
 import 'primeicons/primeicons.css'
+import 'prismjs/themes/prism-coy.css'
 
-import {createApp} from 'vue'
+import '@/assets/styles/main.css'
+import '@/assets/styles/sidebar.css'
+import '@/assets/styles/responsive.css'
+import '@/assets/styles/splash.css'
+import '@/assets/styles/profile.css'
+import '@/assets/styles/menu.css'
+import '@/assets/styles/topbar.css'
+
+import {createApp, reactive} from 'vue'
 import App from './App.vue'
 
 import PrimeVue from 'primevue/config'
 import ToastService from 'primevue/toastservice'
 import BadgeDirective from 'primevue/badgedirective'
+import Ripple from 'primevue/ripple'
 import {createRouter, createWebHistory} from 'vue-router'
 
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Dialog from 'primevue/dialog'
 import Toast from 'primevue/toast'
-import Menubar from 'primevue/menubar';
-import Badge from 'primevue/badge';
-import Avatar from 'primevue/avatar';
+import Menubar from 'primevue/menubar'
+import Badge from 'primevue/badge'
+import Avatar from 'primevue/avatar'
 
-import Sample from '@/components/Sample'
+import Dashboard from '@/components/Dashboard'
 import Chart from 'primevue/chart'
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/', component: Sample}
+        {path: '/', component: Dashboard}
     ]
 })
 
 const app = createApp(App)
-app.use(PrimeVue, {ripple: true})
+app.config.globalProperties.$appState = reactive({inputStyle: 'outlined'})
+
+app.use(PrimeVue)
 app.use(ToastService)
 app.use(router)
 
-app.directive("badge", BadgeDirective)
+app.directive('badge', BadgeDirective)
+app.directive('ripple', Ripple)
 
 app.component('Button', Button)
 app.component('InputText', InputText)

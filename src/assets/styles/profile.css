@@ -1,0 +1,117 @@
+/* General */
+/* Menu Common */
+/* Menu Light */
+/* Menu Dark */
+/* Topbar */
+/* Footer */
+.layout-profile {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.layout-profile img {
+  width: 56px;
+  margin: 10px;
+}
+
+.layout-profile .layout-profile-link {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0.75em;
+  transition: color 0.2s;
+}
+
+.layout-profile .layout-profile-link i {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+
+.layout-profile ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.layout-profile ul li button {
+  width: 100%;
+  padding: 1em;
+  border: 0 none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.layout-profile ul li button:hover {
+  color: #0388e5;
+}
+
+.layout-profile ul li button span {
+  margin-left: 0.25em;
+  vertical-align: middle;
+}
+
+.layout-profile ul li button i {
+  vertical-align: middle;
+}
+
+.layout-profile ul.layout-submenu-wrapper-enter-from, .layout-profile ul.layout-submenu-wrapper-leave-to {
+  max-height: 0;
+}
+
+.layout-profile ul.layout-submenu-wrapper-enter-to, .layout-profile ul.layout-submenu-wrapper-leave-from {
+  max-height: 1000px;
+}
+
+.layout-profile ul.layout-submenu-wrapper-leave-active {
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+
+.layout-profile ul.layout-submenu-wrapper-enter-active {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.layout-sidebar-light .layout-profile .layout-profile-link {
+  color: #232428;
+}
+
+.layout-sidebar-light .layout-profile .layout-profile-link:hover {
+  color: #0388e5;
+}
+
+.layout-sidebar-light .layout-profile ul {
+  background-color: #fff;
+}
+
+.layout-sidebar-light .layout-profile ul li button {
+  color: #232428;
+}
+
+.layout-sidebar-light .layout-profile ul li button:hover {
+  color: #0388e5;
+}
+
+.layout-sidebar-dark .layout-profile .layout-profile-link {
+  color: #fff;
+}
+
+.layout-sidebar-dark .layout-profile .layout-profile-link:hover {
+  color: #0388e5;
+}
+
+.layout-sidebar-dark .layout-profile ul {
+  background-color: #2e3035;
+}
+
+.layout-sidebar-dark .layout-profile ul li button {
+  color: #fff;
+}
+
+.layout-sidebar-dark .layout-profile ul li button:hover {
+  color: #0388e5;
+}
+
+/*# sourceMappingURL=profile.css.map */
